@@ -44,7 +44,7 @@ const BrowseOfficeWrapper = () => {
         For Your Better Productivity.
       </h2>
       {loading ? (
-        <p>Loading...</p>
+        <p className="text-center">Loading...</p>
       ) : (
         <div className="grid grid-cols-3 gap-[30px]">
           {offices.map((office, i) => (

@@ -30,10 +30,6 @@ const BrowseCityWrapper = () => {
     }
   };
 
-  if (loading) {
-    return <p>Loading...</p>;
-  }
-
   if (error) {
     return <p>Error loading data: {error}</p>;
   }
@@ -52,26 +48,30 @@ const BrowseCityWrapper = () => {
           Explore All City
         </a>
       </div>
-      <div className="swiper w-full">
-        <div className="swiper-wrapper">
-          <Swiper
-            direction="horizontal"
-            spaceBetween={30}
-            slidesPerView="auto"
-            slidesOffsetAfter={30}
-            slidesOffsetBefore={30}
-          >
-            {cities.map((city, i) => (
-              <SwiperSlide
-                key={i}
-                className="!w-fit first-of-type:pl-[calc((100%-1130px-60px)/2)] last-of-type:pr-[calc((100%-1130px-60px)/2)]"
-              >
-                <CityCard city={city} />
-              </SwiperSlide>
-            ))}
-          </Swiper>
+      {loading ? (
+        <p className="text-center">Loading...</p>
+      ) : (
+        <div className="swiper w-full">
+          <div className="swiper-wrapper">
+            <Swiper
+              direction="horizontal"
+              spaceBetween={30}
+              slidesPerView="auto"
+              slidesOffsetAfter={30}
+              slidesOffsetBefore={30}
+            >
+              {cities.map((city, i) => (
+                <SwiperSlide
+                  key={i}
+                  className="!w-fit first-of-type:pl-[calc((100%-1130px-60px)/2)] last-of-type:pr-[calc((100%-1130px-60px)/2)]"
+                >
+                  <CityCard city={city} />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
         </div>
-      </div>
+      )}
     </section>
   );
 };
