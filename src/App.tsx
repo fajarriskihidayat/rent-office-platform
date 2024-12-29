@@ -3,7 +3,7 @@ import "./App.css";
 import Browse from "./pages/Browse";
 import OfficeDetail from "./pages/OfficeDetail";
 import BookOffice from "./pages/BookOffice";
-import CityDetails from "./pages/CityDetails";
+import CityDetails from "./pages/CityDetail";
 import SuccessBooking from "./pages/SuccessBooking";
 import CheckBooking from "./pages/CheckBooking";
 

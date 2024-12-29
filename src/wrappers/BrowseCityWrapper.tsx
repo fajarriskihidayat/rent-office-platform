@@ -4,6 +4,7 @@ import { City } from "../types/type";
 import { useEffect, useState } from "react";
 import axiosInstance from "../api/axios";
 import { AxiosError } from "axios";
+import { Link } from "react-router-dom";
 
 const BrowseCityWrapper = () => {
   const [cities, setCities] = useState<City[]>([]);
@@ -65,7 +66,9 @@ const BrowseCityWrapper = () => {
                   key={i}
                   className="!w-fit first-of-type:pl-[calc((100%-1130px-60px)/2)] last-of-type:pr-[calc((100%-1130px-60px)/2)]"
                 >
-                  <CityCard city={city} />
+                  <Link to={`/city/${city.slug}`}>
+                    <CityCard city={city} />
+                  </Link>
                 </SwiperSlide>
               ))}
             </Swiper>
