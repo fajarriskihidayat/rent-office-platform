@@ -3,6 +3,7 @@ import OfficeCard from "../components/OfficeCard";
 import { Office } from "../types/type";
 import axiosInstance from "../api/axios";
 import { AxiosError } from "axios";
+import { Link } from "react-router-dom";
 
 const BrowseOfficeWrapper = () => {
   const [offices, setOffices] = useState<Office[]>([]);
@@ -46,7 +47,9 @@ const BrowseOfficeWrapper = () => {
       ) : (
         <div className="grid grid-cols-3 gap-[30px]">
           {offices.map((office, i) => (
-            <OfficeCard office={office} key={i} />
+            <Link to={`/office/${office.slug}`}>
+              <OfficeCard office={office} key={i} />
+            </Link>
           ))}
         </div>
       )}

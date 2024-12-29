@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import { useEffect, useState } from "react";
 import axiosInstance from "../api/axios";
@@ -82,7 +82,9 @@ const CityDetail = () => {
             ) : (
               <div className="grid grid-cols-3 gap-[30px]">
                 {city?.officeSpaces.map((office, i) => (
-                  <OfficeCard office={office} key={i} />
+                  <Link to={`/office/${office.slug}`}>
+                    <OfficeCard office={office} key={i} />
+                  </Link>
                 ))}
               </div>
             )}
