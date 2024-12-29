@@ -34,13 +34,13 @@ const CityDetail = () => {
     }
   };
 
-  console.log({ city });
-
   return (
     <>
       <Navbar />
       {loading ? (
         <p className="text-center p-5">Loading...</p>
+      ) : error ? (
+        <p className="text-center p-5">{error}</p>
       ) : (
         <>
           <header className="flex flex-col w-full">

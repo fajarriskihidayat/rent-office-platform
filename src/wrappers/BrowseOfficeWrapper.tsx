@@ -29,10 +29,6 @@ const BrowseOfficeWrapper = () => {
     }
   };
 
-  if (error) {
-    return <p>Error loading data: {error}</p>;
-  }
-
   return (
     <section
       id="Fresh-Space"
@@ -45,6 +41,8 @@ const BrowseOfficeWrapper = () => {
       </h2>
       {loading ? (
         <p className="text-center">Loading...</p>
+      ) : error ? (
+        <p className="text-center p-5">{error}</p>
       ) : (
         <div className="grid grid-cols-3 gap-[30px]">
           {offices.map((office, i) => (

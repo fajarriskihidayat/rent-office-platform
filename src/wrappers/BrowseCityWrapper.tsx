@@ -31,10 +31,6 @@ const BrowseCityWrapper = () => {
     }
   };
 
-  if (error) {
-    return <p>Error loading data: {error}</p>;
-  }
-
   return (
     <section id="Cities" className="flex flex-col gap-[30px] mt-[100px]">
       <div className="w-full max-w-[1130px] mx-auto flex items-center justify-between">
@@ -51,6 +47,8 @@ const BrowseCityWrapper = () => {
       </div>
       {loading ? (
         <p className="text-center">Loading...</p>
+      ) : error ? (
+        <p className="text-center p-5">{error}</p>
       ) : (
         <div className="swiper w-full">
           <div className="swiper-wrapper">
