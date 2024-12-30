@@ -7,3 +7,7 @@ export const rupiahFormat = (value: number) => {
     maximumFractionDigits: 0,
   }).format(value);
 };
+
+export const generateUniqueCode = () => {
+  return Math.floor(100 + Math.random() * 900); //random 3 digit
+};
