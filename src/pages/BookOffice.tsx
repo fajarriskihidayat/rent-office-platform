@@ -91,7 +91,7 @@ const BookOffice = () => {
       navigate("/success-booking", {
         state: {
           office,
-          booking: data,
+          booking: data.data,
         },
       });
     } catch (error) {
