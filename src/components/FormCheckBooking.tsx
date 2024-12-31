@@ -68,9 +68,7 @@ const FormCheckBooking = ({
         disabled={isLoading}
         className="flex items-center justify-center rounded-full p-[12px_30px] gap-3 bg-[#0D903A] font-bold text-[#F7F7FD]"
       >
-        <span className="text-nowrap">
-          {isLoading ? "Loading..." : "Check Booking"}
-        </span>
+        <span className="text-nowrap">Check Booking</span>
       </button>
     </form>
   );

@@ -38,6 +38,7 @@ const CheckBooking = () => {
       return;
     }
 
+    setError("");
     setIsLoading(true);
 
     try {
@@ -84,7 +85,9 @@ const CheckBooking = () => {
           handleChange={handleChange}
           handleSubmit={handleSubmit}
         />
-        {error ? (
+        {isLoading ? (
+          <p className="text-center">Loading...</p>
+        ) : error ? (
           <p className="text-center">{error}</p>
         ) : (
           bookingDetail && <DetailBooking data={bookingDetail} />

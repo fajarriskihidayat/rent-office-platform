@@ -13,7 +13,7 @@ const Navbar = () => {
           <Link to={"/"}>Popular</Link>
           <Link to={"/"}>Categories</Link>
           <Link to={"/"}>Events</Link>
-          <Link to={"/"}>My Booking</Link>
+          <Link to={"/check-booking"}>My Booking</Link>
         </ul>
         <Link
           to={"/"}
