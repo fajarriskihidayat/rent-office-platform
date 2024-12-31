@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import { BASE_URL } from "../utils";
 
@@ -61,12 +61,12 @@ const SuccessBooking = () => {
             Pesanan Anda sedang kami proses, kami akan menginformasikan status
             Anda melalui SMS
           </p>
-          <a
-            href="view-booking-details.html"
+          <Link
+            to={"/check-booking"}
             className="flex items-center justify-center w-full rounded-full p-[16px_26px] gap-3 bg-[#0D903A] font-bold text-[#F7F7FD]"
           >
             <span>View Booking Details</span>
-          </a>
+          </Link>
         </div>
       </section>
     </>
