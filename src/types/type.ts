@@ -31,7 +31,7 @@ export interface City {
   officeSpaces: Office[];
 }
 
-export interface BookingDetails {
+export interface BookingDetail {
   id: number;
   name: string;
   phone_number: string;
